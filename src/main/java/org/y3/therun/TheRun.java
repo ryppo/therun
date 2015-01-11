@@ -69,9 +69,4 @@ public class TheRun extends IApplication {
     public void beforeShutDown() {
     }
 
-    @Override
-    public void beforeShutDown() {
-        
-    }
-
 }
