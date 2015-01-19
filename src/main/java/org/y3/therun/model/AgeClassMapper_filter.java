@@ -1,15 +1,17 @@
 package org.y3.therun.model;
 
-import org.y3.commons.model.IModel_model;
+import org.y3.commons.model.IModelMapper_filter;
 
-/**
- * <p>Title: org.y3.therun.model - AgeClass_model</p>
- * <p>Description: Age class model</p>
+/** 
+ * <p>Title: org.y3.therun.model - AgeClassMapper_filter</p>
+ * <p>Description: Filter for age class mapper</p>
  * <p>Copyright: 2015</p>
- * <p>Organisation: IT-Happens.de</p>
+ * <p>Company: SE Bordnetze GmbH</p>
+ * <p>Department: CIT SC GSD</p>
  * @author Christian.Rybotycky
- */
-public class AgeClass_model implements IModel_model {
+ * @version $Id$
+*/
+public class AgeClassMapper_filter implements IModelMapper_filter {
     
     private Integer id;
     private String title;
@@ -44,8 +46,8 @@ public class AgeClass_model implements IModel_model {
         return yearTo;
     }
 
-    public void setYearTo(Integer yearTo) {
-        this.yearTo = yearTo;
+    public void setYearTo(Integer toYear) {
+        this.yearTo = toYear;
     }
 
 }
