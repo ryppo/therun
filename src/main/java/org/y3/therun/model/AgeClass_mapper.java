@@ -26,6 +26,8 @@ public class AgeClass_mapper extends IModel_mapper{
     public final static String KEY_TITLE = "TITLE";
     public final static String KEY_YEAR_FROM = "YEAR_FROM";
     public final static String KEY_YEAR_TO = "YEAR_TO";
+    //relation keys
+    public final static String FOREIGN_KEY_BELONGSTOAGECLASSESDEFINITION = "BELONGS_TO_AGECLASSESDEFINITION";
 
     public AgeClass_mapper(SqLiteJdbcDatabase _database) {
         super(_database);
@@ -46,6 +48,9 @@ public class AgeClass_mapper extends IModel_mapper{
             }
             if (acFilter.getYearTo() != null) {
                 filters.put(KEY_YEAR_TO, acFilter.getYearTo().toString());
+            }
+            if (acFilter.getBelongsToAgeclassesdefinition() != null) {
+                filters.put(FOREIGN_KEY_BELONGSTOAGECLASSESDEFINITION, acFilter.getBelongsToAgeclassesdefinition().toString());
             }
             where = getDatabase().createWhereClause(filters, true);
         }
@@ -79,10 +84,12 @@ public class AgeClass_mapper extends IModel_mapper{
         String sql = "INSERT INTO " + getTableName() + "( "
                 + KEY_TITLE + ", "
                 + KEY_YEAR_FROM + ", "
-                + KEY_YEAR_TO + ") VALUES ("
+                + KEY_YEAR_TO 
+                + FOREIGN_KEY_BELONGSTOAGECLASSESDEFINITION + ") VALUES ("
                 + "'" + acFilter.getTitle() + "', "
                 + acFilter.getYearFrom() + ", "
-                + acFilter.getYearTo();
+                + acFilter.getYearTo() + ", "
+                + acFilter.getBelongsToAgeclassesdefinition();
         int affectedRows = getDatabase().sqlUpdate(sql);
         if (affectedRows >= 1) {
             acFilter.setId(getLastCreatedModelId());

@@ -17,37 +17,52 @@ public class AgeClassMapper_filter implements IModelMapper_filter {
     private String title;
     private Integer yearFrom;
     private Integer yearTo;
+    //relations
+    private Integer belongsToAgeclassesdefinition;
+
+    public Integer getBelongsToAgeclassesdefinition() {
+        return belongsToAgeclassesdefinition;
+    }
+
+    public AgeClassMapper_filter setBelongsToAgeclassesdefinition(Integer belongsToAgeclassesdefinition) {
+        this.belongsToAgeclassesdefinition = belongsToAgeclassesdefinition;
+        return this;
+    }
 
     public Integer getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public AgeClassMapper_filter setId(Integer id) {
         this.id = id;
+        return this;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
+    public AgeClassMapper_filter setTitle(String title) {
         this.title = title;
+        return this;
     }
 
     public Integer getYearFrom() {
         return yearFrom;
     }
 
-    public void setYearFrom(Integer yearFrom) {
+    public AgeClassMapper_filter setYearFrom(Integer yearFrom) {
         this.yearFrom = yearFrom;
+        return this;
     }
 
     public Integer getYearTo() {
         return yearTo;
     }
 
-    public void setYearTo(Integer toYear) {
+    public AgeClassMapper_filter setYearTo(Integer toYear) {
         this.yearTo = toYear;
+        return this;
     }
 
 }
