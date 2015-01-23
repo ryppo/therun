@@ -1,4 +1,4 @@
-package org.y3.therun.model;
+package org.y3.therun.model.ageclass;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

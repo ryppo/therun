@@ -1,4 +1,4 @@
-package org.y3.therun.model;
+package org.y3.therun.model.ageclass;
 
 import org.y3.commons.model.IModel_model;
 

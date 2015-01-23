@@ -1,5 +1,6 @@
 package org.y3.therun.model;
 
+import org.y3.therun.model.ageclass.AgeClass_list;
 import org.y3.commons.model.IModel_model;
 
 /**
