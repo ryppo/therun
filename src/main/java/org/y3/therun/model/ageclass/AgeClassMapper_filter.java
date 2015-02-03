@@ -23,6 +23,15 @@ public class AgeClassMapper_filter implements IModelMapper_filter {
     public Integer getBelongsToAgeclassesdefinition() {
         return belongsToAgeclassesdefinition;
     }
+    
+    public AgeClassMapper_filter() {
+    }
+    
+    public AgeClassMapper_filter(AgeClass_filter ageClass_filter) {
+        if (ageClass_filter != null) {
+            
+        }
+    }
 
     public AgeClassMapper_filter setBelongsToAgeclassesdefinition(Integer belongsToAgeclassesdefinition) {
         this.belongsToAgeclassesdefinition = belongsToAgeclassesdefinition;

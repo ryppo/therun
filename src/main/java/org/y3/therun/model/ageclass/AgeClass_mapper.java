@@ -101,6 +101,10 @@ public class AgeClass_mapper extends IModel_mapper{
     public AgeClass_model loadAgeClass(AgeClassMapper_filter filter) throws SQLException {
         return (AgeClass_model) loadModel(filter);
     }
+    
+    public AgeClass_list loadAgeClasses(AgeClassMapper_filter filter) throws SQLException {
+        return (AgeClass_list) loadModels(filter);
+    }
 
     @Override
     public String getTableName() {
